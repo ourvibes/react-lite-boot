@@ -1,0 +1,23 @@
+{
+  "extends": ["react-app"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "import/extensions": ["error", "never"]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js?(x)", "**/*.test.ts?(x)"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
+}

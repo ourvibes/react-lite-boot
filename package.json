@@ -1,0 +1,93 @@
+{
+  "name": "react-lite-boot",
+  "version": "0.0.1",
+  "private": true,
+  "author": "qzjiang",
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "ahooks": "^3.5.0",
+    "antd": "^4.21.2",
+    "axios": "^0.27.2",
+    "bizcharts": "^4.1.19",
+    "classnames": "^2.3.1",
+    "dayjs": "^1.11.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash-es": "^4.17.21",
+    "nanoid": "^4.0.0",
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "numeral": "^2.0.6",
+    "path": "^0.12.7",
+    "query-string": "^7.1.1",
+    "react": "18.2.0",
+    "react-app-polyfill": "^3.0.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "recoil": "^0.7.3",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "start:staging": "env-cmd -f .env.app.staging yarn start",
+    "start:feature": "env-cmd -f .env.app.feature yarn start",
+    "start:preview": "env-cmd -f .env.app.preview yarn start",
+    "start:production": "env-cmd -f .env.app.production yarn start",
+    "build:app:staging": "env-cmd -f .env.app.staging yarn build",
+    "build:app:feature": "env-cmd -f .env.app.feature yarn build",
+    "build:app:preview": "env-cmd -f .env.app.preview yarn build",
+    "build:app:production": "env-cmd -f .env.app.production yarn build",
+    "remove:node:modules": "rimraf node_modules"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "@babel/types": "^7.12.7"
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.4.3",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.0",
+    "@types/jest": "^28.1.1",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/lodash-es": "^4.17.4",
+    "@types/node": "^18.0.0",
+    "@types/numeral": "^2.0.1",
+    "@types/query-string": "^6.3.0",
+    "@types/react": "^16.14.7",
+    "@types/react-dom": "^18.0.5",
+    "craco-less": "^2.0.0",
+    "env-cmd": "^10.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ],
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
+  }
+}
